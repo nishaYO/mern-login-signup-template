@@ -1,6 +1,9 @@
+// read .env file and avail its contents here
+require("dotenv").config();
+
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/test';
+const mongoURI = process.env.MONGO_URI;
 
 // Function to connect to the MongoDB database
 const connectToMongo = () => {
